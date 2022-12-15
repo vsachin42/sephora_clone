@@ -7,23 +7,33 @@ async function fetchProducts(url){
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    let headers=["Product Name","Price","Remove Product"];
-    // clear the table
-    // tableHead.innerHTML=`<tr></tr>`;
-    // tableBody.innerHTML="";
-    // appending headers
-    // for(let head of headers){
-    //     let header=document.createElement("th");
-    //     header.textContent=head;
-    //     tableHead.querySelector("tr").appendChild(header);
+    // let headers=["Product Name","Price","Remove Product"];
+    // // clear the table
+    // // tableHead.innerHTML=`<tr></tr>`;
+    // // tableBody.innerHTML="";
+    // // appending headers
+    // // for(let head of headers){
+    // //     let header=document.createElement("th");
+    // //     header.textContent=head;
+    // //     tableHead.querySelector("tr").appendChild(header);
 
-    // }
+    // // }
     renderTable(data,headers)
 }
 
 
 function renderTable(data,headers){
     table.innerHTML=`<table>
+    <tr>
+      <th>${headers[0]}</th>
+      <th>${headers[1]}</th>
+      <th>${headers[2]}</th>
+    </tr>
+    <tr>
+      <th>${headers[0]}</th>
+      <th>${headers[1]}</th>
+      <th>${headers[2]}</th>
+    </tr>
     <tr>
       <th>${headers[0]}</th>
       <th>${headers[1]}</th>
