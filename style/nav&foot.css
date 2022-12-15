@@ -154,6 +154,10 @@ body{
   display: flex;
 }
 
+#search-nav{
+  /* border: 1px solid red; */
+  margin-top: 10px;
+}
 /* #search-nav-div>div:nth-child(1){
   /* border: 2px solid green; */
 /* } */ 
@@ -223,4 +227,418 @@ textarea:focus, input:focus{
   color: #f30293;
 }
 
-/* -..................................... End search nav-bar ..................................................> */ 
+/* -..................................... End search nav-bar ..................................................> */
+
+
+/* --------------------------------BOTTOM NAVBAR Styling Start---------------------------------- */
+
+#bottom-navbar{
+  height: 80px;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  width: 92%;
+  margin: auto;
+ }
+ #bottom-navbar>div{
+      width:98%;
+      height:100%;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+  }
+ 
+  #bottom-navbar>div {
+  transition: top 0.3s;
+  }
+
+  #bottom-navbar>div>div {
+  float: left;
+  display: block;
+  text-decoration: none;
+  }
+  #bottom-navbar_main>div>button{
+      background-color: white;
+      color: #2f3337;
+      border:0;
+      height:100%;
+      font-size: 14px;
+  }
+  #mens-page-button>a{
+      color: black;
+      text-decoration-line: none;
+  }
+  #mens-page-button>a:hover{
+      /* text-decoration-line: underline; */
+      cursor: pointer;
+  }
+  #bottom-navbar_main>div>button:hover{
+      /* text-decoration-line: underline; */
+      color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+/* **************************    drop navbar styling  **********************************/            
+
+
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+width: 65%;
+left: 10;
+z-index: 1;
+}
+
+#dropdown_sale:hover .dropdown-content {
+display: block;
+}
+
+#dropdown_makeup:hover .dropdown-content {
+display: block;
+ position:fixed;
+ margin: auto;
+left: 10%;
+}
+
+#dropdown_skincare:hover .dropdown-content{
+display: block;
+position:fixed;
+ margin: auto;
+left: 10%;
+}
+
+#dropdown_fragrance:hover .dropdown-content{
+  display: block;
+position:fixed;
+ margin: auto;
+/* left: 20%; */
+margin-left: -60px;
+
+}
+#dropdown_haircare:hover .dropdown-content{
+  display: block;
+position:fixed;
+ margin: auto;
+/* right: 20%; */
+right: 0.5%;
+}
+
+#dropdown_tools:hover .dropdown-content{
+display: block;
+position:fixed;
+ margin: auto;
+ right: 0.5%;
+
+}
+
+#dropdown_brands:hover .dropdown-content{
+  display: block;
+position:fixed;
+ margin: auto;
+right: 10%;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+float: left;
+width: 22%;
+padding: 8px;
+background-color: white;
+height: auto;
+font-size: 14px;
+margin-right: 8px;
+}
+
+
+.column a {
+float: none;
+color: rgb(117, 114, 121);
+padding: 4px;
+text-decoration: none;
+display: block;
+text-align: left;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 17px;
+}
+
+.column a:hover {
+  /* color:black; */
+  color: #f30293;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+#dropdown-black{
+color:rgb(71, 70, 70);
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+margin-top: 8px;
+margin-bottom: 8px;
+}
+#dropdown-black:hover{
+  /* color:black; */
+  color: #f30293;
+  text-decoration-line: underline;
+}
+#dropdown-hidden_ele{
+visibility: hidden;
+}
+
+ #drop-down-start{
+  /* border: 5px solid black; */
+  height: 57px;
+  display: flex;
+  justify-content: space-evenly; 
+  width: 84%; 
+   margin: auto;
+}
+
+#bottom-navbar_main>div{ 
+  /* border: 2px solid red; */
+ display: flex;
+ font-size: 20px;
+ font-weight: bolder;
+ color: #1F2021;
+ /* font-family: Avenir-NextBold; */
+
+ }  
+
+ #bottom-navbar_main>div>button{
+  font-weight: bold;
+  font-size: 16px;
+  font-family:Avenir-NextBold;
+  /* border: 2px solid red; */
+  color: #000000;
+ }
+
+ #bottom-navbar_main>div>button:hover{
+  padding: 5px;
+  color: #f30293;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+
+ #hr-tag{
+  width: 81%;
+  background-color:  #e3e1e1;
+  height: 1px;
+  border: none;
+ }
+
+ /* --------------------------------BOTTOM NAVBAR Styling End---------------------------------- */
+
+
+ /* ******************************************** Footer style start  **************************************************  */
+
+
+ #back-to-top{
+  /* border: 2px solid green; */
+  height: 50px; 
+  width: 149px; 
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ABC72C;
+  color: #000000;
+ 
+ }
+
+ #back-to-top>p{
+  /* color: #f30293; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+ font-family: 'Avenir-NextBold';
+ margin-bottom: 15px;
+ margin-right: 5px;
+ /* border: 10px solid darkorchid; */
+ }
+
+
+/* ............................................................................................................. */
+
+ #footer-div{
+  /* height: 1520px; */
+  height: auto;
+  /* border: 12px solid red; */
+  width: 100%;
+  margin-bottom: 0px;
+ }
+
+ 
+ 
+ #footer-top{
+  border: 1px solid #F2F2F2;
+  height: 130px;
+  background-color: #efeeee;
+ }
+
+ #footer-top>p{
+  font-size:  23.9999px;
+  color: #000000;
+  font-weight: bolder;
+  text-align: center;
+ }
+
+ #footer-top>div{
+  margin: auto;
+  /* border: 10px solid blue; */
+  text-align: center;
+  height: 49px;
+  width: 31%;
+  display: flex;
+  margin-top: -8px;
+ }
+
+ #footer-top>div>input{
+  height: 99.3%;
+  width: 65%;
+  font-size: 18px;
+  text-align: start;
+  background-color: white;
+  border: none;
+  /* border: 1px solid rgb(0, 255, 153); */
+ }
+
+ #footer-top>div>button{
+  height: 100%;
+  width: 35%;
+  border: none;
+  font-size: 18px;
+  color: white;
+  background-color: #000000;
+  padding: 1px;
+  /* border: 1px solid rgb(0, 255, 153); */
+ }
+
+ /* ........................................................................................................ */
+
+
+ #paragraph{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  height: auto;
+ }
+
+ #paragraph>p{
+  text-align: center;
+  letter-spacing: 0.3px;
+  /* font-weight: lighter; */
+ }
+
+ #p-bold1{
+  /* border: 2px dashed darkred; */
+  font-size: 14px;
+  color: #656565;
+  font-weight: bold;
+  letter-spacing: 2px;
+ }
+
+ #p-bold2{
+font-size: 18.0001px;
+line-height:30.6002px;
+letter-spacing: 0.3px;
+color: #656565;
+
+ }
+
+ #p-bold3{
+  font-size: 18px ;
+  line-height: 20.7px;
+  letter-spacing: 0.3px;
+  color: #656565;
+ }
+
+ .p{
+  font-size: 13.0001px;
+  letter-spacing: 0.3px;
+  color: #656565;
+  background-color: #ffffff;
+  
+ }
+
+ /* ............................................................................................................. */
+
+#footer-bottom>div:hover , #footer-bottom>div>p:hover{
+cursor: pointer;
+color: #f30293;
+}
+
+
+ #footer-bottom{
+ 
+  width: 80%;
+  margin: auto;
+  /* height: 630px; */
+  height: auto;
+  /* border: 5px solid rgb(9, 7, 163); */
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+ }
+
+ #footer-bottom>#p1{
+  text-align: center;
+  font-size: 14px;
+  line-height: 16.1px;
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: bold;
+  height: 60px;
+  text-align: center;
+  /* border: 11px solid blue; */
+ }
+
+ #footer-bottom>#p2{
+  /* border: 1px solid darkred; */
+  height: 21px;
+  text-align: center;
+  font-size: 18px;
+ }
+
+ #footer-bottom>#p3{
+  /* border: 5px solid rgb(2, 179, 14); */
+  height: 70px;
+  width: 40%;
+  line-height: 13.8001px;
+  margin: auto;
+  font-size: 12.0001px;
+  letter-spacing: 0.4px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #p4{
+  /* border: 17px solid purple; */
+  /* height: 550px; */
+  height: auto;
+  text-align: center;
+ }
+
+ .bold{
+  /* border: 5px solid black; */
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  line-height: 20.7px;
+  color: #000000;
+ }
+
+ 
+ /* *************************************   Footer End  here  ***************************************************** */
