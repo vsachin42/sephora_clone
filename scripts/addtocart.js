@@ -10,11 +10,14 @@ let shopMore = document.querySelector("#shopMoreBtn");
 
 logo.addEventListener('click',()=>{
     alert('Redirecting to the landing page');
+    window.location.href = 'index.html';
 })
 
 login.addEventListener('click',()=>{
     console.log("Login Page");
     alert('Login Page');
+    window.location.href = 'admin_page.html';
+
     console.log(discount[6]);
     console.log((+discount[6])+10);
 })
@@ -22,6 +25,8 @@ login.addEventListener('click',()=>{
 checkout.addEventListener('click',()=>{
     console.log('Hello');
     alert("Hi! Let's go to checkout page");
+    window.location.href = 'checkout.html';
+
 })
 
 shopMore.addEventListener('click',()=>{
