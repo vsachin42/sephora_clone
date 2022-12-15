@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Avenir-Next, sans-serif;
+}
+
+.cleanser-main {
+    width: 63%;
+    /* border: 1px solid #555; */
+    min-height: 400px;
+    display: flex;
+    margin: auto;
+}
+
+.cleanser-left {
+    width: 18%;
+    /* height: 390px; */
+    /* border: 1px solid #555; */
+}
+
+.cleanser-right {
+    width: 82%;
+    /* height: 390px; */
+    /* border: 1px solid #555; */
+}
+
+.cleanser-left-1 {
+    /* border: 1px solid #555; */
+}
+
+.cleanser-left-1>div {
+    /* border: 1px solid #555; */
+}
+.cleanser-left-1-1{
+    font-weight: bold;
+    font-size: 14px;
+}
+.cleanser-left-1-2{
+    padding: 10px;
+    font-size: 14px;
+    color: #656565;
+    border-bottom: 0.3px solid #656565;
+}
+.cleanser-left-1-3{
+    padding: 10px;
+    font-size: 14px;
+    color: #656565;
+    border-bottom: 0.3px solid #656565;
+}
+.cleanser-left-1-2 label{
+    line-height: 16.1px;
+    letter-spacing: 0.3px;
+}
+.cleanser-left-1-3 label{
+    line-height: 16.1px;
+    letter-spacing: 0.3px;
+}
+.cleanser-left-1-3 input:nth-child(1){
+    margin-bottom: 20px; 
+}
+
+
+.cleanser-left-2 {
+    /* border: 1px solid #555; */
+    height: 617px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 16px;
+    color: #656565;
+}
+.cleanser-left-2 span{
+    display: flex;
+    align-items: center;
+}
+.cleanser-left-2>div {
+    cursor: pointer;
+    border: 2px solid #555;
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*right part*/
+
+/*right part filter and sort*/
+
+.cleanser-right-1{
+    display: flex;
+    /* border: 1px solid #115; */
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    font-size: 14px;
+    padding: 0px 10px 0px 10px;
+}
+.cleanser-right-1-1>p:nth-child(2){
+    margin-left: 20px;
+}
+
+/*right part cards or products*/
+.cleanser-right-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.cards{
+    /* border: 1px solid #666; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100px; */
+}
+.cards>img{
+    width: 100%;
+    /* overflow: hidden; */
+}
+.sorT{
+    height: 40px;
+    width: 196px;
+}
+.cleanser-right-1-2>label{
+    font-weight: bold;
+}
+
+
+
+.hovershopper{
+    cursor: pointer;
+    height: 00px;
+    font-size: 0;
+    /* background-color: black; */
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.cards:hover .hovershopper{
+    visibility: visible;
+    transition: 0.5s;
+    height: 100px;
+    background-color: #21dfcf;
+}
+.cards:hover p{
+    visibility: hidden;
+}
+.cards:hover img{
+    transform:scale(1.2);
+    /* height: min-content; */
+    transition: 0.5s;
+}
+.cards:hover {
+    overflow: hidden;
+}
+.cards i{
+    transition: 0.5s;
+    /* margin-bottom: 20px; */
+}
+.cards:hover i{
+    font-size: 28px;
+    color: white;
+}
+.cards:hover h3{
+    font-size: 17px;
+    color: white;
+}
+
+
+.cards>p:nth-child(2){
+    font-size: 12px;
+    font-weight:900;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+}
+.cards>p:nth-child(3){
+    font-size: 14px;
+    
+    line-height: 30px;
+    letter-spacing: 0.3px;
+}
+.cards>p:nth-child(4){
+    font-size: 12px;
+    font-weight:900;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+}
