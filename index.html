@@ -7,6 +7,7 @@
     
     <title>🛍️ Cosmetica India's Offline  Online  store</title>
     <link rel="stylesheet" href="./style/nav&foot.css">
+    <link rel="stylesheet" href="./style/homepage.css">
 </head>
 <body>
     <!-- /* <...........................Start top-nav-bar  ..................................................> */ -->
@@ -261,6 +262,54 @@
 <!-- /* -------------------------------- BOTTOM NAVBAR End---------------------------------- */ -->
 
 
+
+<!-- *****************************************   IMAGE SLIDER START   ************************************************************ -->
+
+<div class="container">
+  <div class="image">
+      <img src="./components/img2.webp" alt="">
+  </div>
+  <div class="image">
+      <img src="./components/img3.webp" alt="">
+  </div>
+  <div class="image">
+      <img src="./components/img4.webp" alt="">
+  </div>
+  <div class="image">
+      <img src="./components/img5.webp" alt="">
+  </div>
+  <div class="image">
+      <img src="./components/img6.webp" alt="">
+  </div>
+
+  <div class="image">
+    <img src="./components/img7.webp" alt="">
+ </div>
+
+  <div class="button">
+      <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+      <a onclick="nextimg(1)" class="next">&#10095;</a>
+  </div>
+
+</div>
+
+<div id="dot-div">
+  <div id="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+</div>
+
+
+
+<!-- ***************************************** IMAGE SLIDER END  ********************************************************* -->
+
+
+
 <!-- ******************************************** Footer start  ************************************************** -->
 
 
@@ -351,4 +400,4 @@
 </body>
 </html>
 <script src="https://kit.fontawesome.com/df10a141e6.js" crossorigin="anonymous"></script>
-<script src="./scripts/homepage.js"></script>
+<script src="./scripts/imageSlider.js"></script>

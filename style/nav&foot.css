@@ -1,6 +1,9 @@
 
 /* <...........................................Start top-nav-bar  ..................................................> */
-
+*{
+  font-family: Avenir-Next, sans-serif;
+  }
+  
 body{
   margin: 0;
   padding: 0;
@@ -248,7 +251,7 @@ textarea:focus, input:focus{
       margin: auto;
       justify-content: space-between;
       align-items: center;
-      font-family: Arial, Helvetica, sans-serif;
+      /* font-family: Arial, Helvetica, sans-serif; */
       font-size: 15px;
   }
  
@@ -363,7 +366,7 @@ padding: 4px;
 text-decoration: none;
 display: block;
 text-align: left;
-font-family: Arial, Helvetica, sans-serif;
+/* font-family: Arial, Helvetica, sans-serif; */
 line-height: 17px;
 }
 
@@ -382,7 +385,7 @@ clear: both;
 }
 #dropdown-black{
 color:rgb(71, 70, 70);
-font-family: Arial, Helvetica, sans-serif;
+/* font-family: Arial, Helvetica, sans-serif; */
 font-weight: bold;
 margin-top: 8px;
 margin-bottom: 8px;
@@ -402,7 +405,7 @@ visibility: hidden;
   display: flex;
   justify-content: space-evenly; 
   width: 84%; 
-   margin: auto;
+  margin: auto;
 }
 
 #bottom-navbar_main>div{ 
@@ -418,7 +421,7 @@ visibility: hidden;
  #bottom-navbar_main>div>button{
   font-weight: bold;
   font-size: 16px;
-  font-family:Avenir-NextBold;
+  /* font-family:Avenir-NextBold; */
   /* border: 2px solid red; */
   color: #000000;
  }
@@ -460,9 +463,9 @@ visibility: hidden;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
- font-family: 'Avenir-NextBold';
- margin-bottom: 15px;
- margin-right: 5px;
+ /* font-family: 'Avenir-NextBold'; */
+  margin-bottom: 15px;
+  margin-right: 5px;
  /* border: 10px solid darkorchid; */
  }
 
