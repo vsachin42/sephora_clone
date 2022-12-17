@@ -11,5 +11,5 @@ login.addEventListener('click',()=>{
 })
 
 continueBtn.addEventListener('click',()=>{
-    window.location.href = "details.html";
+    // window.location.href = "payment.html";
 })

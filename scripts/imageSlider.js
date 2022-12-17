@@ -60,3 +60,10 @@ function displayimg(n){
 
 
 // *********************************************************************************************************************
+
+// Go cart page functionality
+
+let cartPage = document.querySelector('.fa-shopping-bag');
+cartPage.addEventListener('click',()=>{
+    window.location.href = 'addtocart.html'
+})
