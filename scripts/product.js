@@ -52,7 +52,8 @@ function cardsRender(data) {
     // console.log(data)
     renderCards.innerHTML = data.map((item) => {
         return cards(item.image, item.name, item.title, item.price,item.id)
-    }).join(' ')
+    }).join(' ');
+    console.log(data);
 }
 
 
@@ -64,7 +65,7 @@ function cards(img, name, title, price,id) {
         <img src=${img} alt="">
         <p>${name}</p>
         <p>${title}</p>
-        <p>RS. ${price}</p>
+        <p>Rs. ${price}</p>
         <div class="hovershopper">
             <div class="addtocart">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -110,3 +111,14 @@ product_name2
 product_price
 : 
 720*/
+
+
+
+//////////////// Fetch Data ////////////////
+
+let addProduct = document.querySelector(".addtocart");
+
+addProduct.addEventListener('click',()=>{
+console.log('hi');
+});
+
