@@ -78,7 +78,10 @@ function cards(img, name, title, price,id) {
         </div>
     </div>
     `
+
 }
+
+
 
 /**sort funtionality */
 
@@ -114,11 +117,4 @@ product_price
 
 
 
-//////////////// Fetch Data ////////////////
-
-let addProduct = document.querySelector(".addtocart");
-
-addProduct.addEventListener('click',()=>{
-console.log('hi');
-});
 

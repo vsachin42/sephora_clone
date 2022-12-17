@@ -139,11 +139,11 @@
 }
 
 
-
+/*need to change lately*/
 .hovershopper{
     cursor: pointer;
-    height: 00px;
-    font-size: 0;
+    height: 0px;
+    font-size: 0px;
     /* background-color: black; */
     transition: 0.5s;
     display: grid;
