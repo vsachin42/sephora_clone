@@ -54,7 +54,8 @@ function displayimg(n){
     }
 
     image[imageno - 1].style.display ="block";
-     dots[imageno - 1].className += " active";
+    dots[imageno - 1].className += " active";
+   
 
 }
 
