@@ -54,9 +54,17 @@ function displayimg(n){
     }
 
     image[imageno - 1].style.display ="block";
-     dots[imageno - 1].className += " active";
+    dots[imageno - 1].className += " active";
+   
 
 }
 
 
 // *********************************************************************************************************************
+
+// Go cart page functionality
+
+let cartPage = document.querySelector('.fa-shopping-bag');
+cartPage.addEventListener('click',()=>{
+    window.location.href = 'addtocart.html'
+})
