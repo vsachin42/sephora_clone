@@ -74,6 +74,8 @@ form>input {
     margin-bottom: 14px;
 }
 form>input:focus{
+    border: none;
+    outline: 2px solid #ec008c;
     outline-color: #ec008c;
 }
 input[type=submit] {
@@ -84,6 +86,7 @@ input[type=submit] {
     color: white;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 .orrrr{
     display: flex;
@@ -101,6 +104,22 @@ input[type=submit] {
     margin-right: 5px;
     margin-left: 5px;
     
+}
+
+.cana{
+    cursor: pointer;
+    
+    height:40px;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social>div{
+    cursor: pointer;
 }
 .social-1{
     background-color: #4285f4;

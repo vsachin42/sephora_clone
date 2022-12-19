@@ -55,3 +55,9 @@ async function addUsers(name,email,password,phone){
         alert("Something went wrong.")    
     }
 }
+
+
+let canabtn = document.querySelector(".cana");
+canabtn.addEventListener("click",()=>{
+    window.location.href = "signup.html";
+});
