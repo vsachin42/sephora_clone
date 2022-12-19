@@ -11,7 +11,7 @@ label {
 }
 .main-signup {
     
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,10 +30,6 @@ label {
 .signup-h1 {
     width: 100%;
     text-align: center;
-    
-}
-input[type="submit"] {
-    cursor: pointer;
 }
 
 .signup-name {
@@ -61,8 +57,8 @@ input[type="submit"] {
     height: 100%;
 }
 .signup-name>input[type="text"]:focus{
-    outline-color: #ec008c;
-    outline: 2px solid #ec008c;
+    outline-color: #ea0020;
+    outline: 2px solid #ea0020;
 }
 form>div {
     width: 100%;
@@ -86,10 +82,8 @@ form>input {
     font-size: 14px;
     margin-bottom: 14px;
 }
-.signup-bottom input:focus{
-    border: none;
-    outline-color: #ec008c;
-    outline: 2px solid #ec008c;
+form>input:focus{
+    outline-color: #ea0020;
 }
 
 input[type=submit] {

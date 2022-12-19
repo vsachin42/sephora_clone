@@ -7,9 +7,12 @@
 .cleanser-main {
     width: 63%;
     /* border: 1px solid #555; */
-    min-height: 400px;
+    
     display: flex;
     margin: auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #555;
 }
 
 .cleanser-left {

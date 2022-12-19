@@ -3,12 +3,13 @@
     padding: 0;
     font-family: Avenir-Next, sans-serif;
 }
+
 label {
     color: #999999;
     line-height: 16.1px;
     font-size: 14px;
 }
-.main-signin {
+.main-signup {
     
     /* border: 3px solid blue; */
     height: 100vh;
@@ -16,7 +17,8 @@ label {
     justify-content: center;
     align-items: center;
 }
-.signin-container {
+
+.signup-container {
     width: 16%;
     margin: auto;
     border: 1px solid black;
@@ -24,31 +26,37 @@ label {
     flex-direction: column;
     padding: 30px;
 }
-.signin-h1 {
+
+.signup-h1 {
     width: 100%;
     text-align: center;
 }
-.signin-name {
+
+.signup-name {
     width: 100%;
     border: 2px solid black;
     display: flex;
     justify-content: space-between;
 }
-.signin-name>select,
-.signin-name>input {
+
+.signup-name>select,
+.signup-name>input {
     border: none;
     outline: none;
 }
-.signin-name>input {
+
+.signup-name>input {
     width: 100%
 }
-.signin-login {
+
+.signup-login {
     color: #ec008c
 }
-.signin-name>input[type="text"]{
+
+.signup-name>input[type="text"]{
     height: 100%;
 }
-.signin-name>input[type="text"]:focus{
+.signup-name>input[type="text"]:focus{
     outline-color: #ec008c;
     outline: 2px solid #ec008c;
 }
@@ -62,6 +70,7 @@ form>div {
     font-size: 14px;
     margin-bottom: 14px;
 }
+
 form>input {
     border: 2px solid black;
     width: 100%;
@@ -72,12 +81,12 @@ form>input {
     height: 40px;
     font-size: 14px;
     margin-bottom: 14px;
+    /* padding-left: 10px; */
 }
 form>input:focus{
-    border: none;
-    outline: 2px solid #ec008c;
     outline-color: #ec008c;
 }
+
 input[type=submit] {
     display: flex;
     justify-content: space-evenly;
@@ -88,6 +97,7 @@ input[type=submit] {
     border: none;
     cursor: pointer;
 }
+
 .orrrr{
     display: flex;
     /* border: 1px solid black; */
@@ -104,22 +114,6 @@ input[type=submit] {
     margin-right: 5px;
     margin-left: 5px;
     
-}
-
-.cana{
-    cursor: pointer;
-    
-    height:40px;
-    font-size: 14px;
-    margin-top: 10px;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.social>div{
-    cursor: pointer;
 }
 .social-1{
     background-color: #4285f4;
@@ -145,6 +139,7 @@ input[type=submit] {
 .fb{
     background-color: #3b5998;
 }
+
 .bellowsocial{
     margin-top: 40px;
     font-size: 12px;
@@ -152,4 +147,34 @@ input[type=submit] {
 }
 .bellowsocial a{
     color: #ec008c;
+}
+.social>div{
+    cursor: pointer;
+}
+.jumptosignuppage{
+    background-color: #ec008c;
+    height: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.jumptosignuppage a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/*in all pages*/
+.mb10px{
+    margin-bottom: 10px;
+    margin-top: 20px;
 }

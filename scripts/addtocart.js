@@ -1,5 +1,5 @@
-let logo = document.querySelector("#logo");
-let login = document.querySelector("#login");
+
+
 let subTotal = document.querySelector('#subTotal');
 let discount = document.querySelector('#discount').innerText;
 let GST = document.querySelector('#GST').innerText;
@@ -8,24 +8,14 @@ let totalPrice = document.querySelector('#totalPrice').innerText;
 let checkout = document.querySelector("#checkoutBtn");
 let shopMore = document.querySelector("#shopMoreBtn");
 let productIdURL = 'https://6395eda290ac47c68077fa1c.mockapi.io/products/';
-let productId = JSON.parse(localStorage.getItem('productId'));
+let productId = JSON.parse(localStorage.getItem('productId'))||[];
 let container = document.querySelector('#productDetails');
 let productPrice = JSON.parse(localStorage.getItem('productPrice'));
 
 
-logo.addEventListener('click',()=>{
-    alert('Redirecting to the landing page');
-    window.location.href = 'index.html';
-})
 
-login.addEventListener('click',()=>{
-    console.log("Login Page");
-    alert('Login Page');
-    window.location.href = 'admin_page.html';
 
-    console.log(discount[6]);
-    console.log((+discount[6])+10);
-})
+
 
 checkout.addEventListener('click',()=>{
     console.log('Hello');

@@ -1,4 +1,8 @@
-let loginbtn = document.querySelector("#login");
-loginbtn.addEventListener("click",()=>{
+// document.querySelectorlet cartPage = document.querySelector('.fa-shopping-bag');
+document.querySelector("#login").addEventListener('click',()=>{
     window.location.href = "login.html";
-});
+})
+
+document.querySelector("#carrrrrttttttt").addEventListener('click',()=>{
+    window.location.href = "addtocart.html";
+})
