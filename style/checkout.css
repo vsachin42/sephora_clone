@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+#payment{
+  position: relative;
+  left: 35vw;
+  top: 7vh;
+  /* align-items: center; */
+}
+
+#payment>input{
+  display: block;
+  width: 40vh;
+  height: 5vh;
+  margin-bottom: 20px;
+}
+
 .footer{
   display: flex;
   justify-content: space-around;
@@ -11,7 +25,7 @@
   height: 10vh;
   align-items: center;
   position: relative;
-  top: 25vh;
+  top: 50vh;
 }
 
 .footer>div:first-child{

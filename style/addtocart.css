@@ -41,6 +41,33 @@
     justify-content: space-between;
 }
 
+#productDetails > div{
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#productDetails>div>img{
+    height: 50vh;
+}
+
+#productDetails>div>button{
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    background-color: rgb(255,51,153);
+    color: white;
+    font-size: medium;
+    border-radius: 5px;
+}
 
 #checkoutDetails{
     width: 30%;
