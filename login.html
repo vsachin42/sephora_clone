@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>SIgn up</title>
     <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/nav&foot.css">
 </head>
-
 <body>
-    <div class="main-signup">
-        <div class="signup-container" id="signup-container">
-            <div class="signup-h1">
+    <div id="nav-div">
+
+        <div id="top-nav">
+            <div id="logo-img">
+                <img src="./components/img1.png" alt="">  
+            </div>
+             <div class="vr-line"></div>
+            <div id="store-locator"><div><i id="i-tag" class="fa-sharp fa-solid fa-location-dot"></i></div><div>Store Locator</div></div>
+            <div id="star"><i id="fstar" class="fa-sharp fa-solid fa-star"></i><i id="dstar" class="fa-sharp fa-solid fa-star"></i><i id="tstar" class="fa-sharp fa-solid fa-star"></i></div>
+            <div id="offer"><div>Get 10% OFF on your first purchase. Use code:</div> <div>BEAUTY10</div></div>
+            <div id="star"><i id="fstar" class="fa-sharp fa-solid fa-star"></i><i id="dstar" class="fa-sharp fa-solid fa-star"></i><i id="tstar" class="fa-sharp fa-solid fa-star"></i></div>
+            <div id="get-app"><div>⤓</div><div>Get APP</div></div>
+    
+            <div class="vr-line"></div>
+            
+            <div id="track-order"><div><i class="fa-solid fa-box"></i></div><div>Track Order</div></div>
+    
+            <div class="vr-line"></div>
+        
+            <div id="loyalty"><div><i class="fa-sharp fa-solid fa-trophy"></i></div><div>Loyalty</div></div>
+    
+         </div>
+
+    </div>
+    <div class="main-signin">
+        <div class="signin-container" id="signin-container">
+            <div class="signin-h1">
                 <h1>LOGIN</h1>
             </div>
-
-            <div class="signup-bottom">
-                <form action="">
+            <div class="signin-bottom">
+                <form action="" class="signinform">
                     <label for="">Email*</label><br>
-                    <input type="text" required><br>
-
-                    <label for="">Password*</label><br>
-                    <input type="text" required><br>
+                    <input type="text" class="email" required><br>
+                    <label for="" >Password*</label><br>
+                    <input type="text" class="password" required><br>
                     <input type="submit" value="CONTINUE">
                 </form>
             </div>
@@ -31,22 +52,18 @@
                 <span>Or</span>
                 <div></div>
             </div>
-
             <div class="social">
                 <div class="social-1"><div style="display: inline;"><i class="fa-brands fa-google"></i></div> <span>Continue with Google</span></div>
                 <div class="social-1 fb"><div style="display: inline;"><i class="fa-brands fa-facebook"></i></div> <span>Continue with Facebook</span> </div>
             </div>
-
-
             <div class="bellowsocial">
                 <p>By proceeding, you agree to <a href=""> Privacy Policy,</a></p>
                 <p><a href="">Terms & Conditions</a> </p>
             </div>
         </div>
-        
+       
     </div>
 </body>
-
 </html>
-
+<script src="./scripts/login.js"></script>
 <script src="https://kit.fontawesome.com/d1da2a05d8.js" crossorigin="anonymous"></script>
