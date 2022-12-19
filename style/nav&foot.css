@@ -222,14 +222,20 @@ textarea:focus, input:focus{
 
 #login{
   display: flex;
+  cursor: pointer;
   /* border: 5px solid red; */
  gap: 15px;
 }
-
+.sbag{
+  cursor: pointer;
+}
+.slike{
+  cursor: pointer;
+}
 #fav-bag-user>div>i{
   color: #f30293;
 }
-
+/*  */
 /* -..................................... End search nav-bar ..................................................> */
 
 
@@ -400,12 +406,16 @@ visibility: hidden;
 }
 
  #drop-down-start{
-  /* border: 5px solid black; */
+  
   height: 57px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly; 
   width: 84%; 
   margin: auto;
+  background-color: #fff;
+  /* top: 50%; */
+  /* position: fixed; */
 }
 
 #bottom-navbar_main>div{ 
