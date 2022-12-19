@@ -1,22 +1,19 @@
 
-nav .logo{
-    min-width: 100px;
-}
-nav .logo img{
-    width:100px;
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+.search-bar>h1{
+    text-align: center;
+    margin-top: 20px;
+}
 body{
     min-height: 100vh;
-    /* background-color: lightblue; */
-    /* border: 5px solid black; */
-
 }
+
+/*--------------------------- side navbar ----------------------------------*/
 nav{
     position: fixed;
     top: 0;
@@ -26,19 +23,18 @@ nav{
     padding: 10px 14px;
     background-color: whitesmoke;
     border-right:2px solid  grey;
-    /* border: 1px solid green; */
 }
 nav .logo{
-    min-width: 100px;
+    min-width:  80%;
 }
 nav .logo img{
-    width:150px;
+    width:100%;
     object-fit: cover;
     border-radius: 10px;
 }
 nav .menu-items{
     margin-top: 40px;
-    height: calc(100% - 90px);
+    height: calc(100% - 90%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,7 +51,7 @@ nav .menu-items{
 }
 .menu-items i{
     font-size: 24px;
-    min-width: 40px;
+    min-width: 20% ;
     height: 100%;
     display: flex;
     align-items: center;
@@ -70,14 +66,14 @@ nav .menu-items{
     color: var(--primary-color);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+/* ----------------------main content area and search box---------------- */
 .dashboard{
     position: relative;
     left: 18%;
-    /* background-color: red; */
     height: 60px;
     width: calc(100% - 18%);
     padding: 10px 14px;
-    /* border: 1px solid red; */
 }
 .dashboard .top{
     padding: 10px;
@@ -88,21 +84,12 @@ nav .menu-items{
     align-items: center;
     width: calc(100% - 18%);
     justify-content: space-between;
-    /* border: 1px solid yellow; */
-     
- 
 }
 .add_button>button{
     width: 150px;
     height: 30px;
 }
-/* .dashboard .top input{
-    width: 300px;
-    height: 30px;
-    margin :20px 20px 20px 0px;
-    border-style: none;
-    border-radius: 5%;
-} */
+
 .dashboard .top .search-bar{
     position: relative;
     height: 45px;
@@ -131,35 +118,56 @@ nav .menu-items{
   
     position: absolute;
     left: 18%;
-    /* background-color: red; */
     width: calc(100% - 18%);
     padding: 10px 14px;
-    /* border: 1px solid blueviolet; */
     margin-top: 10px;
 }
 
 
-/* --------------styling for table------------------ */
+/* --------------------------styling for table----------------------------*/
 
 table{
     width: 100%;
-    margin: auto;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
-table, th, td {
-    border:1px solid black;
+table tr:nth-child(1){
+    background-color: #109177;
+    height: 30px;
+}
+table td {
+    border:1px solid #ccc;
     text-align: center;
   }
-tr>td:nth-child(2){
+
+.prod{
  display: flex;
  align-items: center;
- /* justify-content: space-around */
-
   }
+
 td>img{
     width: 30px;
 }
 
-/* Add products form style */
+table button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+/*----------------------Add products form style--------------------------*/
 
 .form-style-5{
 	max-width: 500px;
@@ -244,12 +252,83 @@ td>img{
 	background: #109177;
 }
 
-/* .test{
-    height: 30px;
+/* ----------------------------media queries----------------------- */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 18%;
+        padding: 2px 5px;
+        background-color: whitesmoke;
+        border-right:2px solid  grey;
+    }
+    nav .logo{
+        min-width:  80%;
+    }
+    nav .logo img{
+        width:100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    nav .menu-items{
+        margin-top: 40px;
+        height: calc(100% - 90%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu-items i{
+        font-size: 8px;
+        min-width: 20% ;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(58, 56, 56)
+    }
+    .menu-items li a .link-name{
+        font-size: 12px;
+        color: rgb(58, 56, 56)
+    }
+  }
 
-    border: 2px solid red;
-    margin-left: 18%;
-    margin-top: 20px;
-} */
+  @media screen and (max-width: 480px){
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 18%;
+        padding: 5px 10px;
+        background-color: whitesmoke;
+        border-right:2px solid  grey;
+    }
+    nav .logo{
+        min-width:  80%;
+    }
+    nav .logo img{
+        width:100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    nav .menu-items{
+        margin-top: 40px;
+        height: calc(100% - 90%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu-items i{
+       display: none;
+    }
+    .menu-items li a .link-name{
+        font-size: 8px;
+        color: rgb(58, 56, 56)
+    }
+    
+  }
 
 
