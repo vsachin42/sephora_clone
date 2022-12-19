@@ -11,7 +11,7 @@ label {
 }
 .main-signup {
     
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@ label {
     width: 100%
 }
 
-.signup-login i{
+.signup-login {
     color: #ec008c
 }
 
@@ -57,8 +57,8 @@ label {
     height: 100%;
 }
 .signup-name>input[type="text"]:focus{
-    outline-color: #ea0020;
-    outline: 2px solid #ea0020;
+    outline-color: #ec008c;
+    outline: 2px solid #ec008c;
 }
 form>div {
     width: 100%;
@@ -83,7 +83,7 @@ form>input {
     margin-bottom: 14px;
 }
 form>input:focus{
-    outline-color: #ea0020;
+    outline-color: #ec008c;
 }
 
 input[type=submit] {
@@ -94,4 +94,59 @@ input[type=submit] {
     color: white;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+}
+
+.orrrr{
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+.orrrr>div{
+    width: 40%;
+    height: 0;
+    opacity: 70%;
+    border: 1px solid black;
+}
+.orrrr>span{
+    margin-right: 5px;
+    margin-left: 5px;
+    
+}
+.social-1{
+    background-color: #4285f4;
+    height: 40px;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.social-1>div{
+    margin-left: 10px;
+    background-color: white;
+    height:max-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+.social-1 span{
+    margin-left: 30px;
+    color: white;
+    font-weight: 700;
+}
+.fb{
+    background-color: #3b5998;
+}
+
+.bellowsocial{
+    margin-top: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+.bellowsocial a{
+    color: #ec008c;
+}
+.social>div{
+    cursor: pointer;
 }
