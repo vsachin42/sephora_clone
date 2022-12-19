@@ -3,11 +3,16 @@
     padding: 0;
     font-family: Avenir-Next, sans-serif;
 }
-
+#search-nav-div>div>div>input {
+    border: none;
+    width: 360px;
+    outline: none;
+    /* margin-left: 10px; */
+    /* border: 1px; */
+  }
 .cleanser-main {
     width: 63%;
-    /* border: 1px solid #555; */
-    
+    /* border: 1px solid #555; */   
     display: flex;
     margin: auto;
     margin-top: 40px;

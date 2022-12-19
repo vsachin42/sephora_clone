@@ -1,4 +1,9 @@
 signinForm = document.querySelector(".signinform");
+
+// console.log(log_in.innerHTML)
+// let username='';
+// log_in.innerHTML=username||"Login";
+
 let url = "https://6395eda290ac47c68077fa1c.mockapi.io/users/";
 signinForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -30,9 +35,12 @@ async function checkUsers(email, password, url) {
     }
     else {
 
-        
+        username="logged In"
+        localStorage.setItem("user", "logged in");
         alert("Sign In Successful");
+        
         window.open("./index.html", "_self");
+        
     }
 }
 

@@ -1,5 +1,7 @@
 
-
+let log_in_data=localStorage.getItem("user");
+let log_in=document.querySelector(".cpointer>div");
+log_in.innerHTML=log_in_data||"Login";
 
 
 // ************************************ code for image slider  ******************************************************
@@ -17,7 +19,7 @@ let imgintervel =  setInterval(function(){
     }
  
    
-    console.log(imageno);
+    // console.log(imageno);
     displayimg(imageno);
     imageno++;
  },2000)
