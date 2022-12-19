@@ -8,6 +8,8 @@ let side_add = document.querySelector(".nav-links li:nth-child(2)");
 let side_cust = document.querySelector(".nav-links li:nth-child(3)");
 let side_ord = document.querySelector(".nav-links li:nth-child(4)");
 let search = document.querySelector(".search");
+let searchbar = document.querySelector(".search-bar");
+
 
 
 
@@ -15,23 +17,41 @@ let search = document.querySelector(".search");
 
 
 window.addEventListener("load", () => {
+  searchbar.style.visibility = "initial" ;
   fetchProducts(url);
 });
 side_prod.addEventListener("click", (e) => {
   e.preventDefault();
+  searchbar.style.visibility = "initial" ;
   fetchProducts(url);
 })
 side_add.addEventListener("click", (e) => {
   e.preventDefault();
+   searchbar.style.visibility = "initial" ;
   addForm();
+  const form  = document.querySelector('.form-style-5 form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let product_name = document.getElementById("title").value;
+    let product_name2 = document.getElementById("name").value;
+    let product_price = document.getElementById("price").value;
+    let product_img = document.getElementById("img").value;
+    let product_details = document.getElementById("details").value;
+    let product_size = document.getElementById("size").value;
+    let product_desc = document.getElementById("info").value;
+    let product_color = document.getElementById("color").value;  
+    addProducts(product_name,product_name2,product_price,product_img,product_details,product_size,product_desc,product_color,url);
+});
 })
 side_cust.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log('customers')
+  searchbar.style.visibility = "hidden" ;
   fetchCutomers(cust_url);
+
 })
 side_ord.addEventListener("click", (e) => {
   e.preventDefault();
+  searchbar.style.visibility = "hidden" ;
   console.log('orders')
   fetchOrders(ord_url);
 })
@@ -47,7 +67,8 @@ search.addEventListener("keypress", (event) => {
     })
     console.log(sdata);
     if (sdata.length == 0) {
-      document.querySelector(".display-main").innerHTML = "Can't Find Anything";
+      document.querySelector(".display-main").innerHTML = `<h2>No Matching Products</h2>`
+      
     }
     else {
       renderTable(sdata);
@@ -56,7 +77,7 @@ search.addEventListener("keypress", (event) => {
   }
 });
 
-//--------------Functions for fetching products and rendiring to table-------------//
+//--------------Functions for fetching products and rendering to table-------------//
 
 
 async function fetchProducts(url) {
@@ -99,6 +120,7 @@ async function DeleteBtn(id) {
       }
     });
     if (delete_request.ok) {
+      alert("Item Removed")
       fetchProducts(url);
     }
 
@@ -114,14 +136,14 @@ function getasTd(img, name, price, id, index) {
   if (index == 0) {
     return `
     <tr class="productTr"><td><b>No.</b></td>
-        <td><b>Product Name</b></td>
+        <td ><b>Product Name</b></td>
         <td><b>Product Price(Rs)</b></td>
         <td><b>Remove Product</b></td>
     </tr>
     <tr class="productTr"><td>${index + 1}</td>
-        <td><img src=${img}> ${name}</td>
+        <td class="prod"><img src=${img}> ${name}</td>
         <td>${price}</td>
-        <td><button id=${id}>delete</button></td>
+        <td><button id=${id}>Remove</button></td>
     </tr>
     `
   }
@@ -129,14 +151,14 @@ function getasTd(img, name, price, id, index) {
     return `
   <tr class="productTr"><tr>
       <td>${index + 1}</td>
-      <td><img src=${img}> ${name}</td>
+      <td class="prod"><img src=${img}> ${name}</td>
       <td>${price}</td>
-      <td><button id=${id}>delete</button></td>
+      <td><button id=${id}>Remove</button></td>
   </tr>
   `}
 
 }
-//--------------Functions for fetching customers and rendiring to table-------------//
+//--------------Functions for fetching customers and rendering to table-------------//
 
 
 async function fetchCutomers(url) {
@@ -151,7 +173,7 @@ function renderTableCust(data) {
   
     ${data.map((item, index) => {
     let user_name = item.name;
-    let email = item["e-mail"];
+    let email = item.email;
     let user_id = item.id;
     return getasTdCust(email, user_name, user_id, index);
   }).join(" ")}
@@ -177,6 +199,7 @@ async function DeleteBtnUser(data_id) {
       }
     });
     if (delete_request.ok) {
+      alert("User Removed")
       fetchCutomers(cust_url);
     }
 
@@ -204,7 +227,7 @@ function getasTdCust(email, user_name, user_id, index) {
       <td>${index}</td>
       <td> ${user_name}</td>
       <td>${email}</td>
-      <td><button id=${user_id}>delete</button></td>
+      <td><button id=${user_id}>Remove</button></td>
   </tr>
   `}
 
@@ -251,6 +274,7 @@ async function DeleteBtnOrder(data_id) {
       }
     });
     if (delete_request.ok) {
+      alert("order Deleted")
       fetchOrders(ord_url);
     }
   }
@@ -262,7 +286,8 @@ async function DeleteBtnOrder(data_id) {
 function getasTdOrd(userName, totalProd, totalPrice,userEmail,orderId,index) {
   if (index == 0) {
     return `
-    <tr class="orderTr"><td><b>No.</b></td>
+    <tr class="orderTr">
+        <td><b>No.</b></td>
         <td><b>User Name</b></td>
         <td><b>User E-mail</b></td>
         <td><b>Total Products Ordered</b></td>
@@ -276,8 +301,8 @@ function getasTdOrd(userName, totalProd, totalPrice,userEmail,orderId,index) {
     return `
   <tr class="orderTr"><tr>
       <td>${index}</td>
-      <td> ${userName}</td>
-      <td> ${userEmail}</td>
+      <td>${userName}</td>
+      <td>${userEmail}</td>
       <td>${totalProd}</td>
       <td>${totalPrice}</td>
       <td><button id=${orderId}>delete</button></td>
@@ -285,7 +310,7 @@ function getasTdOrd(userName, totalProd, totalPrice,userEmail,orderId,index) {
   `}
 
 }
-// Functions to add products
+// ----------------------------Functions to add products-----------------------//
 
 function addForm() {
   display.innerHTML = `
@@ -293,16 +318,52 @@ function addForm() {
 <form>
 <fieldset>
 <legend><span class="number">+</span> Fill in the details</legend>
-<input type="text" name="field1" placeholder="Product Title *">
-<input type="text" name="field2" placeholder="Product Name *">
-<input type="url" name="field3" placeholder="Image Link *">
-<input type="text" name="field4" placeholder="Product Price*">
-<input type="text" name="field5" placeholder="Product Details*">
-<input type="text" name="field5" placeholder="Additional Info*">  
+<input type="text" id="title" name="field1" placeholder="Product Title *" required>
+<input type="text" id="name" name="field2" placeholder="Product Name *" required>
+<input type="url" id="img" name="field3" placeholder="Image Link *" required>
+<input type="text" id="price" name="field4" placeholder="Product Price*" required> 
+<input type="text" id="color" name="field5" placeholder="Product Color*" required>
+<input type="text" id="size" name="field5" placeholder="Product Size*" required>
+<input type="text" id="details" name="field6" placeholder="Product Details*" required> 
+<input type="text" id="info" name="field7" placeholder="Additional Info*" required>  
 </fieldset>
 <input type="submit" value="Add" />
 </form>
 </div>
   `
+}
+
+async function addProducts(product_name,product_name2,product_price,product_img,product_details,product_size,product_desc,product_color,url){
+	try {
+		
+		let productObj = {
+			product_name : product_name,
+      product_name2 :product_name2 ,
+      product_price :product_price ,
+      product_img :product_img ,
+      product_details :product_details ,
+      product_size :product_size ,
+      product_desc :product_desc ,
+      product_color :product_color  
+		}
+    console.log(productObj)
+
+		let post_request = await fetch(url,{
+			method : "POST",
+			headers : {
+				"Content-Type": "application/json"
+			},
+			body : JSON.stringify(productObj)
+		})
+
+		if(post_request.ok){
+			alert("Product Added")
+			addForm();
+		}
+	} 
+	
+	catch (error) {
+		alert("Something went wrong. Not able to Post your data.")	
+	}
 }
 
