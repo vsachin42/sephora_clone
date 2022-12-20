@@ -77,13 +77,20 @@
     height: 50%;
     background-color: rgb(242,242,242);
 }
-
+#checkoutDetails>div>h4{
+    width: 50%;
+}
+#checkoutDetails>div>h6{
+    width: 50%;
+}
 
 #checkoutDetails>div{
     display: flex;
-    justify-content: space-around;
+    justify-content:start;
     font-size: 30px;
     padding: 10px;
+    /* border-bottom: 1px solid black; */
+    /* border: 1px solid black; */
 }
 
 #checkout{

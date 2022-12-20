@@ -3,7 +3,7 @@ let dataURL = "https://6395eda290ac47c68077fa1c.mockapi.io/products/"
 let sortButton = document.querySelector(".sorT");
 let productId = JSON.parse(localStorage.getItem('productId')) || [];
 let search = document.querySelector(".search");
-console.log("hey")
+// console.log("hey")
 let sdata;
 
 async function data() {
@@ -21,7 +21,7 @@ async function data() {
             return obj;
         })
         sdata = mappedData;
-        console.log(data, sdata)
+        // console.log(data, sdata)
 
         cardsRender(mappedData)
         sortButton.addEventListener("change", async function (e) {
@@ -62,6 +62,23 @@ function cardsRender(data) {
     // console.log(data);
 
 
+    // single product page
+    let singllleee = document.querySelectorAll(".imggggg")
+    // console.dir(singllleee);
+
+    for(let item of singllleee){
+        item.addEventListener("click",() => {
+            console.log(item.id)
+            localStorage.setItem("singleproductid", item.id);
+            window.location.href = "singleproductpage.html";
+        });
+    }
+
+
+
+
+
+
     let card = document.querySelectorAll('.addtocart');
     for (let item of card) {
         item.addEventListener('click', () => {
@@ -88,7 +105,7 @@ function cardsRender(data) {
 function cards(img, name, title, price, id) {
     return `
     <div class="cards" data-id="${id}">
-        <img class="imggg" src=${img} alt="">
+        <img class="imggggg" id="${id}" src=${img} alt="">
         <p>${name}</p>
         <p>${title}</p>
         <p>Rs. ${price}</p>
@@ -148,10 +165,13 @@ let filter = document.querySelector(".newarr");
 
 
 filter.addEventListener("change", (e) => {
-    let label = document.querySelector(".newfilt");
+    let label = document.querySelector(".cleanser-right-1-1");
     e.preventDefault();
     if (filter.checked == true) {
-        label.innerText = "New Arrivals";
+        ;
+        label.innerHTML = `
+        <p>1 FILTER APPLIED</p>
+        <p class="newfilt">"New Arrivals"</p>`
         let newdata = sdata;
         newdata.sort((a, b) =>
             b.id - a.id

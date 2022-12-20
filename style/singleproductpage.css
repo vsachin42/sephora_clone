@@ -25,7 +25,9 @@
     letter-spacing: 0.3px;
     /* margin-right: 40px; */
 }
-
+.singlepage-1>span:nth-child(5){
+    color: #ff3399;
+}
 .singlepage-2 {
     width: 100%;
     /* border: 1px solid #555; */
@@ -307,6 +309,7 @@
 
 
 .single-2-page {
+    
     margin: auto;
     margin-top: 30px;
     width: 63%;
@@ -338,6 +341,7 @@
 
 .single-2-page-2>div{
     margin-left: 10px;
+    /* background-color: black; */
 }
 .single-2-page-2-p{
     margin-top:32px;
@@ -345,6 +349,7 @@
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 15px;
+    /* background-color: black; */
 }
 
 

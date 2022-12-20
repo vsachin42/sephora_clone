@@ -84,6 +84,7 @@ body {
 #get-app {
   display: flex;
   gap: 9px;
+  
   justify-content: center;
   align-items: center;
 }
@@ -91,10 +92,11 @@ body {
 #get-app>div:nth-child(1) {
   color: #f30293;
   border: 1px solid #f30293;
-  padding-left: 2px;
-  padding-right: 6px;
-  height: 17px;
-  width: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+ 
 }
 
 
@@ -151,13 +153,15 @@ body {
 
 #search-nav-div>div>div>input {
   border: none;
-  width: 360px;
+  /* width: 360px; */
   /* margin-left: 10px; */
   /* border: 1px; */
 }
 
 #search-nav-div>div>div {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #search-nav {
@@ -179,7 +183,7 @@ body {
 #search-nav-div>div>div>i {
   /* border: 1px solid black; */
   color: #f30293;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 textarea:focus,
@@ -421,7 +425,7 @@ textarea:focus,
   height: 57px;
   display: flex;
   justify-content: space-evenly;
-  width: 84%;
+  width: 63%;
   margin: auto;
 }
 
@@ -450,10 +454,12 @@ textarea:focus,
 }
 
 #hr-tag {
-  width: 81%;
+  width: 70%;
   background-color: #e3e1e1;
   height: 1px;
   border: none;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 /* --------------------------------BOTTOM NAVBAR Styling End---------------------------------- */

@@ -1,0 +1,1 @@
+ GET https://6395eda290ac47c68077fa1c.mockapi.io/products/2
